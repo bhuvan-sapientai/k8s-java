@@ -1,0 +1,1055 @@
+---
+targetClass:
+  fullClassName: "io.kubernetes.client.extended.kubectl.KubectlDrain"
+methods:
+- method:
+    name: "gracePeriod"
+    sourceCodeSignature: "KubectlDrain gracePeriod(int gracePeriodSeconds)"
+    returnType: "io.kubernetes.client.extended.kubectl.KubectlDrain"
+    parameters:
+    - name: "gracePeriodSeconds"
+      type: "int"
+    instructionFingerprint: "61C41890DB0776469507F574D301CDA0"
+  paths:
+  - testPathName: "gracePeriodTest"
+    constructorSignature: "<init>() : void"
+    problemWasSolvedByProver: true
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      name: "constructor"
+      valueUuid: "target"
+    - type: "INPUT"
+      name: "gracePeriodSeconds"
+      valueUuid: "gracePeriodSeconds"
+    - type: "STATIC"
+      name: "Configuration.class.real"
+      valueUuid: "Configuration.class.real"
+      methodExercised:
+        expression: "getDefaultApiClient():apiClient"
+    - type: "RESULT"
+      name: "result"
+      valueUuid: "targetClassObject"
+    disabled: false
+    allValues:
+    - modelValueType: "OBJECT"
+      content: !<new>
+        target: "io.kubernetes.client.extended.kubectl.KubectlDrain"
+        parameters: []
+      valueType: "io.kubernetes.client.extended.kubectl.KubectlDrain"
+      uuid: "target"
+    - modelValueType: "BASIC"
+      content: !<regular>
+        value: 0
+      valueType: "int"
+      uuid: "gracePeriodSeconds"
+    - modelValueType: "REAL"
+      valueType: "io.kubernetes.client.openapi.Configuration"
+      uuid: "Configuration.class.real"
+    - modelValueType: "OBJECT"
+      content: !<static_method_return>
+        target: "io.kubernetes.client.openapi.Configuration"
+        method: "getDefaultApiClient"
+        methodParameters: []
+      valueType: "io.kubernetes.client.openapi.ApiClient"
+      uuid: "apiClient"
+    - modelValueType: "THIS"
+      valueType: "io.kubernetes.client.extended.kubectl.KubectlDrain"
+      uuid: "targetClassObject"
+- method:
+    name: "force"
+    sourceCodeSignature: "KubectlDrain force()"
+    returnType: "io.kubernetes.client.extended.kubectl.KubectlDrain"
+    instructionFingerprint: "73515A476692B618859DDAA2C02983BF"
+  paths:
+  - testPathName: "forceTest"
+    constructorSignature: "<init>() : void"
+    problemWasSolvedByProver: true
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      name: "constructor"
+      valueUuid: "target"
+    - type: "STATIC"
+      name: "Configuration.class.real"
+      valueUuid: "Configuration.class.real"
+      methodExercised:
+        expression: "getDefaultApiClient():apiClient"
+    - type: "RESULT"
+      name: "result"
+      valueUuid: "targetClassObject"
+    disabled: false
+    allValues:
+    - modelValueType: "OBJECT"
+      content: !<new>
+        target: "io.kubernetes.client.extended.kubectl.KubectlDrain"
+        parameters: []
+      valueType: "io.kubernetes.client.extended.kubectl.KubectlDrain"
+      uuid: "target"
+    - modelValueType: "REAL"
+      valueType: "io.kubernetes.client.openapi.Configuration"
+      uuid: "Configuration.class.real"
+    - modelValueType: "OBJECT"
+      content: !<static_method_return>
+        target: "io.kubernetes.client.openapi.Configuration"
+        method: "getDefaultApiClient"
+        methodParameters: []
+      valueType: "io.kubernetes.client.openapi.ApiClient"
+      uuid: "apiClient"
+    - modelValueType: "THIS"
+      valueType: "io.kubernetes.client.extended.kubectl.KubectlDrain"
+      uuid: "targetClassObject"
+- method:
+    name: "ignoreDaemonSets"
+    sourceCodeSignature: "KubectlDrain ignoreDaemonSets()"
+    returnType: "io.kubernetes.client.extended.kubectl.KubectlDrain"
+    instructionFingerprint: "66307D337C6D45A5B93F311CD364A901"
+  paths:
+  - testPathName: "ignoreDaemonSetsTest"
+    constructorSignature: "<init>() : void"
+    problemWasSolvedByProver: true
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      name: "constructor"
+      valueUuid: "target"
+    - type: "STATIC"
+      name: "Configuration.class.real"
+      valueUuid: "Configuration.class.real"
+      methodExercised:
+        expression: "getDefaultApiClient():apiClient"
+    - type: "RESULT"
+      name: "result"
+      valueUuid: "targetClassObject"
+    disabled: false
+    allValues:
+    - modelValueType: "OBJECT"
+      content: !<new>
+        target: "io.kubernetes.client.extended.kubectl.KubectlDrain"
+        parameters: []
+      valueType: "io.kubernetes.client.extended.kubectl.KubectlDrain"
+      uuid: "target"
+    - modelValueType: "REAL"
+      valueType: "io.kubernetes.client.openapi.Configuration"
+      uuid: "Configuration.class.real"
+    - modelValueType: "OBJECT"
+      content: !<static_method_return>
+        target: "io.kubernetes.client.openapi.Configuration"
+        method: "getDefaultApiClient"
+        methodParameters: []
+      valueType: "io.kubernetes.client.openapi.ApiClient"
+      uuid: "apiClient"
+    - modelValueType: "THIS"
+      valueType: "io.kubernetes.client.extended.kubectl.KubectlDrain"
+      uuid: "targetClassObject"
+- method:
+    name: "execute"
+    sourceCodeSignature: "V1Node execute()"
+    returnType: "io.kubernetes.client.openapi.models.V1Node"
+    throwsExceptions:
+    - "io.kubernetes.client.extended.kubectl.exception.KubectlException"
+    instructionFingerprint: "8D93F8D34297AE1DD92543006886E3AC"
+  paths:
+  - testPathName: "executeWhenNotIgnoreDaemonSetsThrowsNullPointerException"
+    constructorSignature: "<init>() : void"
+    problemWasSolvedByProver: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      name: "constructor"
+      valueUuid: "target"
+    - type: "INTERNAL"
+      name: "internalMethod"
+      methodExercised:
+        expression: "refreshDiscovery():void"
+        throwsExceptions:
+        - "io.kubernetes.client.extended.kubectl.exception.KubectlException"
+    - type: "INTERNAL"
+      name: "internalMethod"
+      methodExercised:
+        expression: "performCordon():v1Node"
+        throwsExceptions:
+        - "io.kubernetes.client.extended.kubectl.exception.KubectlException"
+    - type: "STATIC"
+      name: "Configuration.class.real"
+      valueUuid: "Configuration.class.real"
+      methodExercised:
+        expression: "getDefaultApiClient():apiClient"
+    - type: "RESULT"
+      name: "result"
+      valueUuid: "nullPointerException"
+    disabled: true
+    failureReason:
+      reason: "VARIABLE_THAT_COULD_NOT_BE_ISOLATED_MOCKED"
+      source: "validatePods(allPods.getItems());"
+      lineNumber: 70
+      details: "A variable could not be isolated/mocked when calling a method - Variable\
+        \ name: allPods - Method: getItems"
+    allValues:
+    - modelValueType: "OBJECT"
+      content: !<new>
+        target: "io.kubernetes.client.extended.kubectl.KubectlDrain"
+        parameters: []
+      valueType: "io.kubernetes.client.extended.kubectl.KubectlDrain"
+      uuid: "target"
+    - modelValueType: "VOID"
+      valueType: "void"
+      uuid: "void"
+    - modelValueType: "OBJECT"
+      content: !<new>
+        target: "io.kubernetes.client.openapi.models.V1Node"
+        parameters: []
+        propertiesMap:
+          metadata:
+            modelValueType: "OBJECT"
+            content: !<new>
+              target: "io.kubernetes.client.openapi.models.V1ObjectMeta"
+              parameters: []
+              propertiesMap:
+                name:
+                  modelValueType: "BASIC"
+                  content: !<regular>
+                    value: "A"
+                  valueType: "java.lang.String"
+                  uuid: "name"
+            valueType: "io.kubernetes.client.openapi.models.V1ObjectMeta"
+            uuid: "metadata"
+      valueType: "io.kubernetes.client.openapi.models.V1Node"
+      uuid: "v1Node"
+    - modelValueType: "REAL"
+      valueType: "io.kubernetes.client.openapi.Configuration"
+      uuid: "Configuration.class.real"
+    - modelValueType: "OBJECT"
+      content: !<static_method_return>
+        target: "io.kubernetes.client.openapi.Configuration"
+        method: "getDefaultApiClient"
+        methodParameters: []
+      valueType: "io.kubernetes.client.openapi.ApiClient"
+      uuid: "apiClient"
+    - modelValueType: "EXCEPTION"
+      content: !<new>
+        target: "java.lang.NullPointerException"
+        parameters: []
+      valueType: "java.lang.NullPointerException"
+      uuid: "nullPointerException"
+    branches:
+    - lineNumber: 93
+      expression: "for-each(pods)"
+      range: "(93,22)-(93,25)"
+      evaluatedAs: true
+      internalMethodName: "validatePods"
+    - lineNumber: 94
+      expression: "pod.getMetadata().getOwnerReferences() == null"
+      range: "(94,11)-(94,56)"
+      evaluatedAs: true
+      internalMethodName: "validatePods"
+    - lineNumber: 97
+      expression: "!ignoreDaemonSets"
+      range: "(97,11)-(97,27)"
+      evaluatedAs: true
+      internalMethodName: "validatePods"
+  - testPathName: "executeWhenRefGetKindEqualsDaemonSetThrowsKubectlException"
+    constructorSignature: "<init>() : void"
+    problemWasSolvedByProver: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      name: "constructor"
+      valueUuid: "target"
+    - type: "INTERNAL"
+      name: "internalMethod"
+      methodExercised:
+        expression: "refreshDiscovery():void"
+        throwsExceptions:
+        - "io.kubernetes.client.extended.kubectl.exception.KubectlException"
+    - type: "INTERNAL"
+      name: "internalMethod"
+      methodExercised:
+        expression: "performCordon():v1Node"
+        throwsExceptions:
+        - "io.kubernetes.client.extended.kubectl.exception.KubectlException"
+    - type: "STATIC"
+      name: "Configuration.class.real"
+      valueUuid: "Configuration.class.real"
+      methodExercised:
+        expression: "getDefaultApiClient():apiClient"
+    - type: "RESULT"
+      name: "result"
+      valueUuid: "kubectlException"
+    disabled: true
+    failureReason:
+      reason: "VARIABLE_THAT_COULD_NOT_BE_ISOLATED_MOCKED"
+      source: "validatePods(allPods.getItems());"
+      lineNumber: 70
+      details: "A variable could not be isolated/mocked when calling a method - Variable\
+        \ name: allPods - Method: getItems"
+    allValues:
+    - modelValueType: "OBJECT"
+      content: !<new>
+        target: "io.kubernetes.client.extended.kubectl.KubectlDrain"
+        parameters: []
+      valueType: "io.kubernetes.client.extended.kubectl.KubectlDrain"
+      uuid: "target"
+    - modelValueType: "VOID"
+      valueType: "void"
+      uuid: "void"
+    - modelValueType: "OBJECT"
+      content: !<new>
+        target: "io.kubernetes.client.openapi.models.V1Node"
+        parameters: []
+        propertiesMap:
+          metadata:
+            modelValueType: "OBJECT"
+            content: !<new>
+              target: "io.kubernetes.client.openapi.models.V1ObjectMeta"
+              parameters: []
+              propertiesMap:
+                name:
+                  modelValueType: "BASIC"
+                  content: !<regular>
+                    value: "A"
+                  valueType: "java.lang.String"
+                  uuid: "name"
+            valueType: "io.kubernetes.client.openapi.models.V1ObjectMeta"
+            uuid: "metadata"
+      valueType: "io.kubernetes.client.openapi.models.V1Node"
+      uuid: "v1Node"
+    - modelValueType: "REAL"
+      valueType: "io.kubernetes.client.openapi.Configuration"
+      uuid: "Configuration.class.real"
+    - modelValueType: "OBJECT"
+      content: !<static_method_return>
+        target: "io.kubernetes.client.openapi.Configuration"
+        method: "getDefaultApiClient"
+        methodParameters: []
+      valueType: "io.kubernetes.client.openapi.ApiClient"
+      uuid: "apiClient"
+    - modelValueType: "EXCEPTION"
+      content: !<new>
+        target: "io.kubernetes.client.extended.kubectl.exception.KubectlException"
+        parameters:
+        - name: "message"
+          value:
+            modelValueType: "BASIC"
+            content: !<regular>
+              value: "Pod managed by DaemonSet found"
+            valueType: "java.lang.String"
+            uuid: "message"
+      valueType: "io.kubernetes.client.extended.kubectl.exception.KubectlException"
+      uuid: "kubectlException"
+    branches:
+    - lineNumber: 93
+      expression: "for-each(pods)"
+      range: "(93,22)-(93,25)"
+      evaluatedAs: true
+      internalMethodName: "validatePods"
+    - lineNumber: 94
+      expression: "pod.getMetadata().getOwnerReferences() == null"
+      range: "(94,11)-(94,56)"
+      evaluatedAs: false
+      internalMethodName: "validatePods"
+    - lineNumber: 97
+      expression: "!ignoreDaemonSets"
+      range: "(97,11)-(97,27)"
+      evaluatedAs: true
+      internalMethodName: "validatePods"
+    - lineNumber: 98
+      expression: "for-each(pod.getMetadata().getOwnerReferences())"
+      range: "(98,37)-(98,74)"
+      evaluatedAs: true
+      internalMethodName: "validatePods"
+    - lineNumber: 99
+      expression: "ref.getKind().equals(\\\"DaemonSet\\\")"
+      range: "(99,15)-(99,47)"
+      evaluatedAs: true
+      internalMethodName: "validatePods"
+  - testPathName: "executeWhenCaughtApiExceptionOrIOExceptionThrowsKubectlException"
+    constructorSignature: "<init>() : void"
+    problemWasSolvedByProver: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      name: "constructor"
+      valueUuid: "target"
+    - type: "INTERNAL"
+      name: "internalMethod"
+      methodExercised:
+        expression: "refreshDiscovery():void"
+        throwsExceptions:
+        - "io.kubernetes.client.extended.kubectl.exception.KubectlException"
+    - type: "INTERNAL"
+      name: "internalMethod"
+      methodExercised:
+        expression: "performCordon():v1Node"
+        throwsExceptions:
+        - "io.kubernetes.client.extended.kubectl.exception.KubectlException"
+    - type: "STATIC"
+      name: "Configuration.class.real"
+      valueUuid: "Configuration.class.real"
+      methodExercised:
+        expression: "getDefaultApiClient():apiClient"
+    - type: "RESULT"
+      name: "result"
+      valueUuid: "kubectlException"
+    disabled: true
+    failureReason:
+      reason: "VARIABLE_THAT_COULD_NOT_BE_ISOLATED_MOCKED"
+      source: "validatePods(allPods.getItems());"
+      lineNumber: 70
+      details: "A variable could not be isolated/mocked when calling a method - Variable\
+        \ name: allPods - Method: getItems"
+    allValues:
+    - modelValueType: "OBJECT"
+      content: !<new>
+        target: "io.kubernetes.client.extended.kubectl.KubectlDrain"
+        parameters: []
+      valueType: "io.kubernetes.client.extended.kubectl.KubectlDrain"
+      uuid: "target"
+    - modelValueType: "VOID"
+      valueType: "void"
+      uuid: "void"
+    - modelValueType: "OBJECT"
+      content: !<new>
+        target: "io.kubernetes.client.openapi.models.V1Node"
+        parameters: []
+        propertiesMap:
+          metadata:
+            modelValueType: "OBJECT"
+            content: !<new>
+              target: "io.kubernetes.client.openapi.models.V1ObjectMeta"
+              parameters: []
+              propertiesMap:
+                name:
+                  modelValueType: "BASIC"
+                  content: !<regular>
+                    value: "A"
+                  valueType: "java.lang.String"
+                  uuid: "name"
+            valueType: "io.kubernetes.client.openapi.models.V1ObjectMeta"
+            uuid: "metadata"
+      valueType: "io.kubernetes.client.openapi.models.V1Node"
+      uuid: "v1Node"
+    - modelValueType: "REAL"
+      valueType: "io.kubernetes.client.openapi.Configuration"
+      uuid: "Configuration.class.real"
+    - modelValueType: "OBJECT"
+      content: !<static_method_return>
+        target: "io.kubernetes.client.openapi.Configuration"
+        method: "getDefaultApiClient"
+        methodParameters: []
+      valueType: "io.kubernetes.client.openapi.ApiClient"
+      uuid: "apiClient"
+    - modelValueType: "EXCEPTION"
+      content: !<new>
+        target: "io.kubernetes.client.extended.kubectl.exception.KubectlException"
+        parameters:
+        - name: "cause"
+          value:
+            modelValueType: "OBJECT"
+            content: !<new>
+              target: "java.lang.Exception"
+              parameters: []
+            valueType: "java.lang.Exception"
+            uuid: "exception"
+      valueType: "io.kubernetes.client.extended.kubectl.exception.KubectlException"
+      uuid: "kubectlException"
+    branches:
+    - lineNumber: 93
+      expression: "for-each(pods)"
+      range: "(93,22)-(93,25)"
+      evaluatedAs: false
+      internalMethodName: "validatePods"
+    - lineNumber: 73
+      expression: "for-each(allPods.getItems())"
+      range: "(73,22)-(73,39)"
+      evaluatedAs: true
+      internalMethodName: "doDrain"
+    - lineNumber: 76
+      expression: "pod.getMetadata().getOwnerReferences() != null"
+      range: "(76,11)-(76,56)"
+      evaluatedAs: true
+      internalMethodName: "doDrain"
+    - lineNumber: 77
+      expression: "for-each(pod.getMetadata().getOwnerReferences())"
+      range: "(77,37)-(77,74)"
+      evaluatedAs: true
+      internalMethodName: "doDrain"
+    - lineNumber: 78
+      expression: "ref.getKind().equals(\\\"DaemonSet\\\")"
+      range: "(78,15)-(78,47)"
+      evaluatedAs: true
+      internalMethodName: "doDrain"
+    - lineNumber: 84
+      expression: "!isDaemonSetPod"
+      range: "(84,11)-(84,25)"
+      evaluatedAs: false
+      internalMethodName: "doDrain"
+    - lineNumber: 56
+      expression: "catch-exception (ApiException | IOException)"
+      range: "(56,7)-(56,42)"
+      evaluatedAs: true
+  - testPathName: "executeWhenIsDaemonSetPod"
+    constructorSignature: "<init>() : void"
+    problemWasSolvedByProver: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      name: "constructor"
+      valueUuid: "target"
+    - type: "INTERNAL"
+      name: "internalMethod"
+      methodExercised:
+        expression: "refreshDiscovery():void"
+        throwsExceptions:
+        - "io.kubernetes.client.extended.kubectl.exception.KubectlException"
+    - type: "INTERNAL"
+      name: "internalMethod"
+      methodExercised:
+        expression: "performCordon():v1Node"
+        throwsExceptions:
+        - "io.kubernetes.client.extended.kubectl.exception.KubectlException"
+    - type: "STATIC"
+      name: "Configuration.class.real"
+      valueUuid: "Configuration.class.real"
+      methodExercised:
+        expression: "getDefaultApiClient():apiClient"
+    - type: "RESULT"
+      name: "result"
+      valueUuid: "v1Node"
+    disabled: true
+    failureReason:
+      reason: "VARIABLE_THAT_COULD_NOT_BE_ISOLATED_MOCKED"
+      source: "validatePods(allPods.getItems());"
+      lineNumber: 70
+      details: "A variable could not be isolated/mocked when calling a method - Variable\
+        \ name: allPods - Method: getItems"
+    allValues:
+    - modelValueType: "OBJECT"
+      content: !<new>
+        target: "io.kubernetes.client.extended.kubectl.KubectlDrain"
+        parameters: []
+      valueType: "io.kubernetes.client.extended.kubectl.KubectlDrain"
+      uuid: "target"
+    - modelValueType: "VOID"
+      valueType: "void"
+      uuid: "void"
+    - modelValueType: "OBJECT"
+      content: !<new>
+        target: "io.kubernetes.client.openapi.models.V1Node"
+        parameters: []
+        propertiesMap:
+          metadata:
+            modelValueType: "OBJECT"
+            content: !<new>
+              target: "io.kubernetes.client.openapi.models.V1ObjectMeta"
+              parameters: []
+              propertiesMap:
+                name:
+                  modelValueType: "BASIC"
+                  content: !<regular>
+                    value: "A"
+                  valueType: "java.lang.String"
+                  uuid: "name"
+            valueType: "io.kubernetes.client.openapi.models.V1ObjectMeta"
+            uuid: "metadata"
+      valueType: "io.kubernetes.client.openapi.models.V1Node"
+      uuid: "v1Node"
+    - modelValueType: "REAL"
+      valueType: "io.kubernetes.client.openapi.Configuration"
+      uuid: "Configuration.class.real"
+    - modelValueType: "OBJECT"
+      content: !<static_method_return>
+        target: "io.kubernetes.client.openapi.Configuration"
+        method: "getDefaultApiClient"
+        methodParameters: []
+      valueType: "io.kubernetes.client.openapi.ApiClient"
+      uuid: "apiClient"
+    branches:
+    - lineNumber: 93
+      expression: "for-each(pods)"
+      range: "(93,22)-(93,25)"
+      evaluatedAs: true
+      internalMethodName: "validatePods"
+    - lineNumber: 94
+      expression: "pod.getMetadata().getOwnerReferences() == null"
+      range: "(94,11)-(94,56)"
+      evaluatedAs: false
+      internalMethodName: "validatePods"
+    - lineNumber: 97
+      expression: "!ignoreDaemonSets"
+      range: "(97,11)-(97,27)"
+      evaluatedAs: true
+      internalMethodName: "validatePods"
+    - lineNumber: 98
+      expression: "for-each(pod.getMetadata().getOwnerReferences())"
+      range: "(98,37)-(98,74)"
+      evaluatedAs: true
+      internalMethodName: "validatePods"
+    - lineNumber: 99
+      expression: "ref.getKind().equals(\\\"DaemonSet\\\")"
+      range: "(99,15)-(99,47)"
+      evaluatedAs: false
+      internalMethodName: "validatePods"
+    - lineNumber: 73
+      expression: "for-each(allPods.getItems())"
+      range: "(73,22)-(73,39)"
+      evaluatedAs: true
+      internalMethodName: "doDrain"
+    - lineNumber: 76
+      expression: "pod.getMetadata().getOwnerReferences() != null"
+      range: "(76,11)-(76,56)"
+      evaluatedAs: true
+      internalMethodName: "doDrain"
+    - lineNumber: 77
+      expression: "for-each(pod.getMetadata().getOwnerReferences())"
+      range: "(77,37)-(77,74)"
+      evaluatedAs: true
+      internalMethodName: "doDrain"
+    - lineNumber: 78
+      expression: "ref.getKind().equals(\\\"DaemonSet\\\")"
+      range: "(78,15)-(78,47)"
+      evaluatedAs: true
+      internalMethodName: "doDrain"
+    - lineNumber: 84
+      expression: "!isDaemonSetPod"
+      range: "(84,11)-(84,25)"
+      evaluatedAs: false
+      internalMethodName: "doDrain"
+  - testPathName: "executeWhenSystemCurrentTimeMillisMinusStartNotLessThanThisGracePeriodSecondsPlus10MultipliedBy103ThrowsKubectlException"
+    constructorSignature: "<init>() : void"
+    problemWasSolvedByProver: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      name: "constructor"
+      valueUuid: "target"
+    - type: "INTERNAL"
+      name: "internalMethod"
+      methodExercised:
+        expression: "refreshDiscovery():void"
+        throwsExceptions:
+        - "io.kubernetes.client.extended.kubectl.exception.KubectlException"
+    - type: "INTERNAL"
+      name: "internalMethod"
+      methodExercised:
+        expression: "performCordon():v1Node"
+        throwsExceptions:
+        - "io.kubernetes.client.extended.kubectl.exception.KubectlException"
+    - type: "STATIC"
+      name: "Configuration.class.real"
+      valueUuid: "Configuration.class.real"
+      methodExercised:
+        expression: "getDefaultApiClient():apiClient"
+    - type: "RESULT"
+      name: "result"
+      valueUuid: "kubectlException"
+    disabled: true
+    failureReason:
+      reason: "VARIABLE_THAT_COULD_NOT_BE_ISOLATED_MOCKED"
+      source: "validatePods(allPods.getItems());"
+      lineNumber: 70
+      details: "A variable could not be isolated/mocked when calling a method - Variable\
+        \ name: allPods - Method: getItems"
+    allValues:
+    - modelValueType: "OBJECT"
+      content: !<new>
+        target: "io.kubernetes.client.extended.kubectl.KubectlDrain"
+        parameters: []
+      valueType: "io.kubernetes.client.extended.kubectl.KubectlDrain"
+      uuid: "target"
+    - modelValueType: "VOID"
+      valueType: "void"
+      uuid: "void"
+    - modelValueType: "OBJECT"
+      content: !<new>
+        target: "io.kubernetes.client.openapi.models.V1Node"
+        parameters: []
+        propertiesMap:
+          metadata:
+            modelValueType: "OBJECT"
+            content: !<new>
+              target: "io.kubernetes.client.openapi.models.V1ObjectMeta"
+              parameters: []
+              propertiesMap:
+                name:
+                  modelValueType: "BASIC"
+                  content: !<regular>
+                    value: "A"
+                  valueType: "java.lang.String"
+                  uuid: "name"
+            valueType: "io.kubernetes.client.openapi.models.V1ObjectMeta"
+            uuid: "metadata"
+      valueType: "io.kubernetes.client.openapi.models.V1Node"
+      uuid: "v1Node"
+    - modelValueType: "REAL"
+      valueType: "io.kubernetes.client.openapi.Configuration"
+      uuid: "Configuration.class.real"
+    - modelValueType: "OBJECT"
+      content: !<static_method_return>
+        target: "io.kubernetes.client.openapi.Configuration"
+        method: "getDefaultApiClient"
+        methodParameters: []
+      valueType: "io.kubernetes.client.openapi.ApiClient"
+      uuid: "apiClient"
+    - modelValueType: "EXCEPTION"
+      content: !<new>
+        target: "io.kubernetes.client.extended.kubectl.exception.KubectlException"
+        parameters:
+        - name: "message"
+          value:
+            modelValueType: "BASIC"
+            content: !<regular>
+              value: "Timed out waiting for Pod delete."
+            valueType: "java.lang.String"
+            uuid: "message"
+      valueType: "io.kubernetes.client.extended.kubectl.exception.KubectlException"
+      uuid: "kubectlException"
+    branches:
+    - lineNumber: 93
+      expression: "for-each(pods)"
+      range: "(93,22)-(93,25)"
+      evaluatedAs: true
+      internalMethodName: "validatePods"
+    - lineNumber: 94
+      expression: "pod.getMetadata().getOwnerReferences() == null"
+      range: "(94,11)-(94,56)"
+      evaluatedAs: false
+      internalMethodName: "validatePods"
+    - lineNumber: 97
+      expression: "!ignoreDaemonSets"
+      range: "(97,11)-(97,27)"
+      evaluatedAs: true
+      internalMethodName: "validatePods"
+    - lineNumber: 98
+      expression: "for-each(pod.getMetadata().getOwnerReferences())"
+      range: "(98,37)-(98,74)"
+      evaluatedAs: true
+      internalMethodName: "validatePods"
+    - lineNumber: 99
+      expression: "ref.getKind().equals(\\\"DaemonSet\\\")"
+      range: "(99,15)-(99,47)"
+      evaluatedAs: false
+      internalMethodName: "validatePods"
+    - lineNumber: 73
+      expression: "for-each(allPods.getItems())"
+      range: "(73,22)-(73,39)"
+      evaluatedAs: true
+      internalMethodName: "doDrain"
+    - lineNumber: 76
+      expression: "pod.getMetadata().getOwnerReferences() != null"
+      range: "(76,11)-(76,56)"
+      evaluatedAs: true
+      internalMethodName: "doDrain"
+    - lineNumber: 77
+      expression: "for-each(pod.getMetadata().getOwnerReferences())"
+      range: "(77,37)-(77,74)"
+      evaluatedAs: true
+      internalMethodName: "doDrain"
+    - lineNumber: 78
+      expression: "ref.getKind().equals(\\\"DaemonSet\\\")"
+      range: "(78,15)-(78,47)"
+      evaluatedAs: false
+      internalMethodName: "doDrain"
+    - lineNumber: 84
+      expression: "!isDaemonSetPod"
+      range: "(84,11)-(84,25)"
+      evaluatedAs: true
+      internalMethodName: "doDrain"
+    - lineNumber: 126
+      expression: "System.currentTimeMillis() - start < (this.gracePeriodSeconds +\
+        \ 10) * 1000"
+      range: "(126,14)-(126,87)"
+      evaluatedAs: false
+      internalMethodName: "waitForPodDelete"
+  - testPathName: "executeWhenExGetCodeEqualsHttpURLConnectionHTTP_NOT_FOUND"
+    constructorSignature: "<init>() : void"
+    problemWasSolvedByProver: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      name: "constructor"
+      valueUuid: "target"
+    - type: "INTERNAL"
+      name: "internalMethod"
+      methodExercised:
+        expression: "refreshDiscovery():void"
+        throwsExceptions:
+        - "io.kubernetes.client.extended.kubectl.exception.KubectlException"
+    - type: "INTERNAL"
+      name: "internalMethod"
+      methodExercised:
+        expression: "performCordon():v1Node"
+        throwsExceptions:
+        - "io.kubernetes.client.extended.kubectl.exception.KubectlException"
+    - type: "STATIC"
+      name: "Configuration.class.real"
+      valueUuid: "Configuration.class.real"
+      methodExercised:
+        expression: "getDefaultApiClient():apiClient"
+    - type: "RESULT"
+      name: "result"
+      valueUuid: "v1Node"
+    disabled: true
+    failureReason:
+      reason: "VARIABLE_THAT_COULD_NOT_BE_ISOLATED_MOCKED"
+      source: "validatePods(allPods.getItems());"
+      lineNumber: 70
+      details: "A variable could not be isolated/mocked when calling a method - Variable\
+        \ name: allPods - Method: getItems"
+    allValues:
+    - modelValueType: "OBJECT"
+      content: !<new>
+        target: "io.kubernetes.client.extended.kubectl.KubectlDrain"
+        parameters: []
+      valueType: "io.kubernetes.client.extended.kubectl.KubectlDrain"
+      uuid: "target"
+    - modelValueType: "VOID"
+      valueType: "void"
+      uuid: "void"
+    - modelValueType: "OBJECT"
+      content: !<new>
+        target: "io.kubernetes.client.openapi.models.V1Node"
+        parameters: []
+        propertiesMap:
+          metadata:
+            modelValueType: "OBJECT"
+            content: !<new>
+              target: "io.kubernetes.client.openapi.models.V1ObjectMeta"
+              parameters: []
+              propertiesMap:
+                name:
+                  modelValueType: "BASIC"
+                  content: !<regular>
+                    value: "A"
+                  valueType: "java.lang.String"
+                  uuid: "name"
+            valueType: "io.kubernetes.client.openapi.models.V1ObjectMeta"
+            uuid: "metadata"
+      valueType: "io.kubernetes.client.openapi.models.V1Node"
+      uuid: "v1Node"
+    - modelValueType: "REAL"
+      valueType: "io.kubernetes.client.openapi.Configuration"
+      uuid: "Configuration.class.real"
+    - modelValueType: "OBJECT"
+      content: !<static_method_return>
+        target: "io.kubernetes.client.openapi.Configuration"
+        method: "getDefaultApiClient"
+        methodParameters: []
+      valueType: "io.kubernetes.client.openapi.ApiClient"
+      uuid: "apiClient"
+    branches:
+    - lineNumber: 93
+      expression: "for-each(pods)"
+      range: "(93,22)-(93,25)"
+      evaluatedAs: true
+      internalMethodName: "validatePods"
+    - lineNumber: 94
+      expression: "pod.getMetadata().getOwnerReferences() == null"
+      range: "(94,11)-(94,56)"
+      evaluatedAs: false
+      internalMethodName: "validatePods"
+    - lineNumber: 97
+      expression: "!ignoreDaemonSets"
+      range: "(97,11)-(97,27)"
+      evaluatedAs: true
+      internalMethodName: "validatePods"
+    - lineNumber: 98
+      expression: "for-each(pod.getMetadata().getOwnerReferences())"
+      range: "(98,37)-(98,74)"
+      evaluatedAs: true
+      internalMethodName: "validatePods"
+    - lineNumber: 99
+      expression: "ref.getKind().equals(\\\"DaemonSet\\\")"
+      range: "(99,15)-(99,47)"
+      evaluatedAs: false
+      internalMethodName: "validatePods"
+    - lineNumber: 73
+      expression: "for-each(allPods.getItems())"
+      range: "(73,22)-(73,39)"
+      evaluatedAs: true
+      internalMethodName: "doDrain"
+    - lineNumber: 76
+      expression: "pod.getMetadata().getOwnerReferences() != null"
+      range: "(76,11)-(76,56)"
+      evaluatedAs: true
+      internalMethodName: "doDrain"
+    - lineNumber: 77
+      expression: "for-each(pod.getMetadata().getOwnerReferences())"
+      range: "(77,37)-(77,74)"
+      evaluatedAs: true
+      internalMethodName: "doDrain"
+    - lineNumber: 78
+      expression: "ref.getKind().equals(\\\"DaemonSet\\\")"
+      range: "(78,15)-(78,47)"
+      evaluatedAs: false
+      internalMethodName: "doDrain"
+    - lineNumber: 84
+      expression: "!isDaemonSetPod"
+      range: "(84,11)-(84,25)"
+      evaluatedAs: true
+      internalMethodName: "doDrain"
+    - lineNumber: 119
+      expression: "catch-exception (ApiException)"
+      range: "(119,9)-(119,30)"
+      evaluatedAs: true
+      internalMethodName: "waitForPodDelete"
+    - lineNumber: 120
+      expression: "ex.getCode() == HttpURLConnection.HTTP_NOT_FOUND"
+      range: "(120,13)-(120,60)"
+      evaluatedAs: true
+      internalMethodName: "waitForPodDelete"
+  - testPathName: "executeWhenExGetCodeNotEqualsHttpURLConnectionHTTP_NOT_FOUNDThrowsKubectlException"
+    constructorSignature: "<init>() : void"
+    problemWasSolvedByProver: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      name: "constructor"
+      valueUuid: "target"
+    - type: "INTERNAL"
+      name: "internalMethod"
+      methodExercised:
+        expression: "refreshDiscovery():void"
+        throwsExceptions:
+        - "io.kubernetes.client.extended.kubectl.exception.KubectlException"
+    - type: "INTERNAL"
+      name: "internalMethod"
+      methodExercised:
+        expression: "performCordon():v1Node"
+        throwsExceptions:
+        - "io.kubernetes.client.extended.kubectl.exception.KubectlException"
+    - type: "STATIC"
+      name: "Configuration.class.real"
+      valueUuid: "Configuration.class.real"
+      methodExercised:
+        expression: "getDefaultApiClient():apiClient"
+    - type: "RESULT"
+      name: "result"
+      valueUuid: "kubectlException"
+    disabled: true
+    failureReason:
+      reason: "VARIABLE_THAT_COULD_NOT_BE_ISOLATED_MOCKED"
+      source: "validatePods(allPods.getItems());"
+      lineNumber: 70
+      details: "A variable could not be isolated/mocked when calling a method - Variable\
+        \ name: allPods - Method: getItems"
+    allValues:
+    - modelValueType: "OBJECT"
+      content: !<new>
+        target: "io.kubernetes.client.extended.kubectl.KubectlDrain"
+        parameters: []
+      valueType: "io.kubernetes.client.extended.kubectl.KubectlDrain"
+      uuid: "target"
+    - modelValueType: "VOID"
+      valueType: "void"
+      uuid: "void"
+    - modelValueType: "OBJECT"
+      content: !<new>
+        target: "io.kubernetes.client.openapi.models.V1Node"
+        parameters: []
+        propertiesMap:
+          metadata:
+            modelValueType: "OBJECT"
+            content: !<new>
+              target: "io.kubernetes.client.openapi.models.V1ObjectMeta"
+              parameters: []
+              propertiesMap:
+                name:
+                  modelValueType: "BASIC"
+                  content: !<regular>
+                    value: "A"
+                  valueType: "java.lang.String"
+                  uuid: "name"
+            valueType: "io.kubernetes.client.openapi.models.V1ObjectMeta"
+            uuid: "metadata"
+      valueType: "io.kubernetes.client.openapi.models.V1Node"
+      uuid: "v1Node"
+    - modelValueType: "REAL"
+      valueType: "io.kubernetes.client.openapi.Configuration"
+      uuid: "Configuration.class.real"
+    - modelValueType: "OBJECT"
+      content: !<static_method_return>
+        target: "io.kubernetes.client.openapi.Configuration"
+        method: "getDefaultApiClient"
+        methodParameters: []
+      valueType: "io.kubernetes.client.openapi.ApiClient"
+      uuid: "apiClient"
+    - modelValueType: "EXCEPTION"
+      content: !<new>
+        target: "io.kubernetes.client.extended.kubectl.exception.KubectlException"
+        parameters:
+        - name: "cause"
+          value:
+            modelValueType: "OBJECT"
+            content: !<new>
+              target: "io.kubernetes.client.openapi.ApiException"
+              parameters:
+              - name: "code"
+                value:
+                  modelValueType: "BASIC"
+                  content: !<regular>
+                    value: 0
+                  valueType: "int"
+                  uuid: "apiException-code"
+              - name: "message"
+                value:
+                  modelValueType: "BASIC"
+                  content: !<regular>
+                    value: "message1"
+                  valueType: "java.lang.String"
+                  uuid: "apiException-message"
+            valueType: "io.kubernetes.client.openapi.ApiException"
+            uuid: "apiException"
+      valueType: "io.kubernetes.client.extended.kubectl.exception.KubectlException"
+      uuid: "kubectlException"
+    branches:
+    - lineNumber: 93
+      expression: "for-each(pods)"
+      range: "(93,22)-(93,25)"
+      evaluatedAs: true
+      internalMethodName: "validatePods"
+    - lineNumber: 94
+      expression: "pod.getMetadata().getOwnerReferences() == null"
+      range: "(94,11)-(94,56)"
+      evaluatedAs: false
+      internalMethodName: "validatePods"
+    - lineNumber: 97
+      expression: "!ignoreDaemonSets"
+      range: "(97,11)-(97,27)"
+      evaluatedAs: true
+      internalMethodName: "validatePods"
+    - lineNumber: 98
+      expression: "for-each(pod.getMetadata().getOwnerReferences())"
+      range: "(98,37)-(98,74)"
+      evaluatedAs: true
+      internalMethodName: "validatePods"
+    - lineNumber: 99
+      expression: "ref.getKind().equals(\\\"DaemonSet\\\")"
+      range: "(99,15)-(99,47)"
+      evaluatedAs: false
+      internalMethodName: "validatePods"
+    - lineNumber: 73
+      expression: "for-each(allPods.getItems())"
+      range: "(73,22)-(73,39)"
+      evaluatedAs: true
+      internalMethodName: "doDrain"
+    - lineNumber: 76
+      expression: "pod.getMetadata().getOwnerReferences() != null"
+      range: "(76,11)-(76,56)"
+      evaluatedAs: true
+      internalMethodName: "doDrain"
+    - lineNumber: 77
+      expression: "for-each(pod.getMetadata().getOwnerReferences())"
+      range: "(77,37)-(77,74)"
+      evaluatedAs: true
+      internalMethodName: "doDrain"
+    - lineNumber: 78
+      expression: "ref.getKind().equals(\\\"DaemonSet\\\")"
+      range: "(78,15)-(78,47)"
+      evaluatedAs: false
+      internalMethodName: "doDrain"
+    - lineNumber: 84
+      expression: "!isDaemonSetPod"
+      range: "(84,11)-(84,25)"
+      evaluatedAs: true
+      internalMethodName: "doDrain"
+    - lineNumber: 119
+      expression: "catch-exception (ApiException)"
+      range: "(119,9)-(119,30)"
+      evaluatedAs: true
+      internalMethodName: "waitForPodDelete"
+    - lineNumber: 120
+      expression: "ex.getCode() == HttpURLConnection.HTTP_NOT_FOUND"
+      range: "(120,13)-(120,60)"
+      evaluatedAs: false
+      internalMethodName: "waitForPodDelete"
